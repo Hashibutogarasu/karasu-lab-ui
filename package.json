@@ -1,0 +1,19 @@
+{
+  "name": "@hashibutogarasu/karasu-lab-ui",
+  "version": "0.1.0",
+  "description": "UI component library for Karasu Lab",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0",
+    "framer-motion": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.0.0"
+  }
+}
