@@ -3,7 +3,12 @@
   "version": "0.2.0",
   "description": "UI component library for Karasu Lab",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hashibutogarasu/karasu-lab-ui.git"
   },
   "files": [
     "src",
