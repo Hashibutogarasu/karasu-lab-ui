@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-import Markdown from '@/components/ui/markdown';
-
+import Markdown from './markdown';
 import { Spinner } from './shadcn-io/spinner';
 
 interface StaticMarkdownProps {

@@ -4,15 +4,16 @@ import { useTranslate } from '@tolgee/react';
 import * as React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import { useCookieConsentContext } from '@/components/providers/cookie-consent-provider';
-import { ButtonWithAdornments } from '@/components/ui/button-with-adornments';
+import { useCookieConsentContext } from '../../providers/cookie-consent-provider';
+
+import { ButtonWithAdornments } from './button-with-adornments';
 import {
   Toast as RadixToast,
   ToastDescription,
   ToastProvider,
   ToastTitle,
   ToastViewport as RadixToastViewport,
-} from '@/components/ui/toast';
+} from './toast';
 
 const slideInFromBottom = keyframes`
   from {

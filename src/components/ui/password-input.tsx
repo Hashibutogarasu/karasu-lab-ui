@@ -1,10 +1,11 @@
+'use client';
+
 import { useTranslate } from '@tolgee/react';
 import React, { useState, forwardRef } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
-import { Input } from '@/components/ui/input';
-
 import { Button } from './button';
+import { Input } from './input';
 
 export type PasswordInputProps = React.InputHTMLAttributes<HTMLInputElement>;
 

@@ -1,12 +1,12 @@
+'use client';
+
 import { Slot } from '@radix-ui/react-slot';
 import * as React from 'react';
 import styled from 'styled-components';
 
-import {
-  buttonVariants,
-  type ButtonProps as BaseButtonProps,
-} from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
+
+import { buttonVariants, type ButtonProps as BaseButtonProps } from './button';
 
 export interface ButtonWithAdornmentsProps
   extends Omit<BaseButtonProps, 'asChild' | 'className'> {
