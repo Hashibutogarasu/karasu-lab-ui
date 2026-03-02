@@ -28,9 +28,11 @@ const StyledToast = styled(RadixToast)`
   position: relative;
   display: inline-block;
   z-index: 999;
-  background-color: #26303b;
+  background-color: var(--card);
+  color: var(--foreground);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  box-shadow: 0 6px 10px rgba(38, 48, 59, 0.35);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   opacity: 0.98;
   list-style: none;
   transform: translateY(0);
