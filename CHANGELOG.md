@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.2.0...karasu-lab-ui-v0.2.1) (2026-03-02)
+
+
+### Bug Fixes
+
+* fixed theme ([bf52047](https://github.com/Hashibutogarasu/karasu-lab-ui/commit/bf52047ecd08e30a8817c5cc228c3efde1ac398a))
+
 ## [0.2.0](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.1.0...karasu-lab-ui-v0.2.0) (2026-02-28)
 
 
