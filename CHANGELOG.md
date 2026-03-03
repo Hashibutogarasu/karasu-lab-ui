@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.2.1...karasu-lab-ui-v0.3.0) (2026-03-03)
+
+
+### Features
+
+* added absolutePrefixes ([f0bffe8](https://github.com/Hashibutogarasu/karasu-lab-ui/commit/f0bffe804bc096175833f54a78dc30e759f46950))
+* added localizations ([3f5725a](https://github.com/Hashibutogarasu/karasu-lab-ui/commit/3f5725a317bc5333977b2c52275d881e85d73ed0))
+
 ## [0.2.1](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.2.0...karasu-lab-ui-v0.2.1) (2026-03-02)
 
 
