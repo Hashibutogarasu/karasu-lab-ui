@@ -1,9 +1,8 @@
 'use client';
 
+import { useTranslate } from '@tolgee/react';
 import React, { useState, forwardRef } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-
-import { useAppTranslate } from '../../hooks/use-app-translate';
 
 import { Button } from './button';
 import { Input } from './input';
@@ -13,7 +12,7 @@ export type PasswordInputProps = React.InputHTMLAttributes<HTMLInputElement>;
 const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
   ({ className, ...props }, ref) => {
     const [visible, setVisible] = useState(false);
-    const { t } = useAppTranslate();
+    const { t } = useTranslate();
 
     return (
       <div className="relative flex">
