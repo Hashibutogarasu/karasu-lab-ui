@@ -95,7 +95,7 @@ export function TranslateProvider({
       ? t(key, params as never, options as never)
       : t(key, undefined, options as never);
 
-    if (process.env.NODE_ENV !== 'production' && result === key) {
+    if (result === key) {
       /* eslint-disable-next-line no-console */
       console.warn(`[Translate Error] Missing translation key: "${key}"`);
     }
