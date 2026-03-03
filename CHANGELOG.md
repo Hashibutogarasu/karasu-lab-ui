@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.3.0...karasu-lab-ui-v0.3.1) (2026-03-03)
+
+
+### Bug Fixes
+
+* fixed import order ([3f1f618](https://github.com/Hashibutogarasu/karasu-lab-ui/commit/3f1f6183c69c2b5ff821e1f1100373b3824d62a4))
+
 ## [0.3.0](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.2.1...karasu-lab-ui-v0.3.0) (2026-03-03)
 
 
