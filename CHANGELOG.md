@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.3.1...karasu-lab-ui-v0.3.2) (2026-03-03)
+
+
+### Bug Fixes
+
+* fixed env validation ([f41f03b](https://github.com/Hashibutogarasu/karasu-lab-ui/commit/f41f03b2cf8c7fa9575bfe366b63bacc056d1237))
+* fixed to use useTranslate ([3a081a3](https://github.com/Hashibutogarasu/karasu-lab-ui/commit/3a081a3eedab851b9c8c80ceef40b61eacacd04f))
+
 ## [0.3.1](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.3.0...karasu-lab-ui-v0.3.1) (2026-03-03)
 
 
