@@ -1,0 +1,131 @@
+{
+  "components": {
+    "dialogs": {
+      "setPassword": {
+        "title": "パスワード設定",
+        "description": "アカウントに新しいパスワードを設定してください。",
+        "newPasswordLabel": "新しいパスワード",
+        "newPasswordPlaceholder": "新しいパスワードを入力してください",
+        "confirmPasswordLabel": "新しいパスワードの確認",
+        "confirmPasswordPlaceholder": "新しいパスワードを確認してください",
+        "error": "パスワードの設定に失敗しました。もう一度お試しください。",
+        "success": "パスワードが正常に設定されました。"
+      },
+      "passwordConfirmation": {
+        "title": "パスワードの確認",
+        "description": "続行するには、パスワードを確認してください。",
+        "placeholder": "パスワード",
+        "invalidPassword": "無効なパスワードです。"
+      },
+      "mfaQr": {
+        "description": "以下のQRコードを認証アプリでスキャンしてください。手動でコードを入力する場合は、次のコードを使用してください:",
+        "title": "多要素認証セットアップ",
+        "secretKeyLabel": "シークレットキー:",
+        "manualInputNote": "QRコードをスキャンできない場合は、手動でコードを入力してください。"
+      },
+      "mfaVerify": {
+        "title": "多要素認証の確認",
+        "description": "認証アプリで生成されたコードを入力してください。",
+        "placeholder": "6桁のコード"
+      },
+      "mfaBackupCodes": {
+        "title": "多要素認証バックアップコード",
+        "description": "以下のバックアップコードを安全な場所に保存してください。これらのコードは、多要素認証デバイスにアクセスできない場合にアカウントにアクセスするために使用できます。",
+        "warning": "注意: これらのコードは一度しか表示されません。後で確認できるように安全な場所に保存してください。"
+      },
+      "mfaDisable": {
+        "title": "多要素認証の無効化",
+        "description": "多要素認証を無効にすると、アカウントのセキュリティが低下します。本当に無効にしますか？",
+        "disable": "多要素認証を無効にする",
+        "warning": "警告: この操作はアカウントのセキュリティを低下させます。",
+        "note": "無効化すると、多要素認証が必要なくなるものの、第三者による不正ログインのリスクが高まります。"
+      },
+      "emailChange": {
+        "title": "メールアドレスの変更",
+        "description": "新しいメールアドレスを入力してください。確認のために、現在のパスワードも必要です。",
+        "newEmailLabel": "新しいメールアドレス",
+        "passwordLabel": "現在のパスワード",
+        "newEmailPlaceholder": "新しいメールアドレスを入力してください",
+        "emailChangeSent": "メールアドレス変更の確認メールを送信しました。メールを確認してください。",
+        "emailChangeError": "メールアドレスの変更に失敗しました。もう一度お試しください。"
+      },
+      "resetPassword": {
+        "title": "パスワードを変更する",
+        "description": "現在のパスワードを入力して、新しいパスワードをセットします。",
+        "currentPasswordLabel": "現在のパスワード",
+        "currentPasswordPlaceholder": "現在使用しているパスワードを入力してください",
+        "newPasswordLabel": "新しいパスワード",
+        "newPasswordPlaceholder": "新しいパスワードを入力してください",
+        "confirmPasswordLabel": "パスワードの確認",
+        "confirmPasswordPlaceholder": "もう一度パスワードを入力してください",
+        "success": "パスワードが正常に変更されました。",
+        "error": "パスワードの変更に失敗しました。もう一度お試しください。"
+      },
+      "passkeySetup": {
+        "title": "パスキーの設定",
+        "description": "アカウントにパスキーを登録します。",
+        "description2": "デバイスの生体認証（指紋や顔認証）やセキュリティキーを使用してログインできるようになります。",
+        "whatIsPasskey": "パスキーとは？",
+        "passkeyBenefits": {
+          "desc1": "パスワードを入力する必要がありません",
+          "desc2": "パスワードよりも安全です",
+          "desc3": "デバイス間で同期されます",
+          "desc4": "フィッシング詐欺に強いです"
+        },
+        "register": "登録する",
+        "registering": "登録中...",
+        "registerSuccessTitle": "パスキーを登録しました",
+        "registerSuccessDescription": "パスキーが正常に登録されました。",
+        "registerErrorTitle": "登録に失敗しました",
+        "registerErrorDescription": "パスキーの登録に失敗しました。もう一度お試しください。",
+        "emailNotFound": "メールアドレスが見つかりませんでした。"
+      },
+      "passkeyDelete": {
+        "title": "パスキーの削除",
+        "description": "本当にこのパスキーを削除しますか？この操作は取り消せません。"
+      }
+    },
+    "forms": {
+      "cookieConsent": {
+        "title": "クッキーの同意",
+        "description1": "当サイトでは、クッキーを使用して体験を向上させています。",
+        "description2": "当サイトの使用を続けることで、クッキーの使用に同意したことになります。",
+        "description3_prefix": "クッキーの設定は",
+        "settingsLink": "設定",
+        "description3_suffix": "で管理できます。",
+        "accept": "同意する",
+        "decline": "拒否する"
+      }
+    },
+    "navigation": {
+      "commandPalette": {
+        "accountHeading": "アカウント",
+        "dashboard": "ダッシュボード",
+        "description": "サイト間の様々な場所に移動",
+        "loginRequired": "ログインが必要",
+        "placeholder": "検索",
+        "settings": "設定",
+        "title": "コマンドショートカット",
+        "empty": "検索結果がありません"
+      },
+      "searchShortcut": {
+        "ctrl": "Ctrl",
+        "k": "K",
+        "placeholder": "検索"
+      },
+      "settingsMenu": {
+        "cookieDisable": "無効",
+        "cookieEnable": "有効",
+        "cookieSettings": "クッキーの設定",
+        "language": "言語設定",
+        "settings": "設定",
+        "theme": "テーマ設定",
+        "themeOptions": {
+          "dark": "ダーク",
+          "light": "ライト",
+          "system": "システム"
+        }
+      }
+    }
+  }
+}

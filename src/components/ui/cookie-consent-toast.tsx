@@ -1,12 +1,13 @@
 'use client';
 
-import { useTranslate } from '@tolgee/react';
 import * as React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import { useCookieConsentContext } from '../../providers/cookie-consent-provider';
+import { UiTranslateProvider } from '../../providers/ui-translate-provider';
 
 import { ButtonWithAdornments } from './button-with-adornments';
+import { Text } from './text';
 import {
   Toast as RadixToast,
   ToastDescription,
@@ -101,7 +102,6 @@ const StyledToastViewport = styled(RadixToastViewport)`
 
 export function CookieConsentToast() {
   const { consent, isInitialized, accept, decline } = useCookieConsentContext();
-  const { t } = useTranslate();
   const show = React.useMemo(
     () => isInitialized && consent !== 'accepted',
     [isInitialized, consent],
@@ -110,43 +110,81 @@ export function CookieConsentToast() {
   if (!show) return null;
 
   return (
-    <ToastProvider duration={Infinity} swipeDirection="down">
-      <StyledToast
-        open={show}
-        onOpenChange={(open) => {
-          if (!open && consent !== 'accepted') {
-            decline();
-          }
-        }}>
-        <div className="flex w-full max-w-[680px] flex-col gap-4">
-          <div className="grid gap-1">
-            <ToastTitle>{t('components.forms.cookieConsent.title')}</ToastTitle>
-            <ToastDescription>
-              <p className="mb-2">
-                {t('components.forms.cookieConsent.description1')}
-              </p>
-              <p>{t('components.forms.cookieConsent.description2')}</p>
-              <p>
-                {t('components.forms.cookieConsent.description3_prefix')}
-                <strong>
-                  <u>{t('components.forms.cookieConsent.settingsLink')}</u>
-                </strong>
-                {t('components.forms.cookieConsent.description3_suffix')}
-              </p>
-            </ToastDescription>
-          </div>
+    <UiTranslateProvider>
+      <ToastProvider duration={Infinity} swipeDirection="down">
+        <StyledToast
+          open={show}
+          onOpenChange={(open) => {
+            if (!open && consent !== 'accepted') {
+              decline();
+            }
+          }}>
+          <div className="flex w-full max-w-[680px] flex-col gap-4">
+            <div className="grid gap-1">
+              <ToastTitle>
+                <Text
+                  rootNamespace="components"
+                  id="forms.cookieConsent.title"
+                />
+              </ToastTitle>
+              <ToastDescription>
+                <p className="mb-2">
+                  <Text
+                    rootNamespace="components"
+                    id="forms.cookieConsent.description1"
+                  />
+                </p>
+                <p>
+                  <Text
+                    rootNamespace="components"
+                    id="forms.cookieConsent.description2"
+                  />
+                </p>
+                <p>
+                  <Text
+                    rootNamespace="components"
+                    id="forms.cookieConsent.description3_prefix"
+                  />
+                  <strong>
+                    <u>
+                      <Text
+                        rootNamespace="components"
+                        id="forms.cookieConsent.settingsLink"
+                      />
+                    </u>
+                  </strong>
+                  <Text
+                    rootNamespace="components"
+                    id="forms.cookieConsent.description3_suffix"
+                  />
+                </p>
+              </ToastDescription>
+            </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            <ButtonWithAdornments variant="default" size="sm" onClick={accept}>
-              {t('components.forms.cookieConsent.accept')}
-            </ButtonWithAdornments>
-            <ButtonWithAdornments variant="outline" size="sm" onClick={decline}>
-              {t('components.forms.cookieConsent.decline')}
-            </ButtonWithAdornments>
+            <div className="flex flex-wrap items-center gap-2">
+              <ButtonWithAdornments
+                variant="default"
+                size="sm"
+                onClick={accept}>
+                <Text
+                  rootNamespace="components"
+                  id="forms.cookieConsent.accept"
+                />
+              </ButtonWithAdornments>
+              <ButtonWithAdornments
+                variant="outline"
+                size="sm"
+                onClick={decline}>
+                <Text
+                  rootNamespace="components"
+                  id="forms.cookieConsent.decline"
+                />
+              </ButtonWithAdornments>
+            </div>
           </div>
-        </div>
-      </StyledToast>
-      <StyledToastViewport />
-    </ToastProvider>
+        </StyledToast>
+        <StyledToastViewport />
+      </ToastProvider>
+    </UiTranslateProvider>
   );
 }

@@ -30,3 +30,8 @@ export * from './components/ui/tabs';
 export * from './components/ui/toast';
 export * from './components/ui/toaster';
 export * from './components/ui/tooltip';
+
+export * from './hooks/use-app-translate';
+export * from './components/ui/text';
+export * from './providers/translate-provider';
+export * from './providers/ui-translate-provider';
