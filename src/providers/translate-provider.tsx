@@ -53,10 +53,12 @@ export function TranslateProvider({
   children,
   rootNamespace,
   namespaceOverride,
+  absolutePrefixes = [],
 }: {
   children: React.ReactNode;
   rootNamespace?: string;
   namespaceOverride?: string;
+  absolutePrefixes?: string[];
 }) {
   const { t } = useTranslate();
   const pathname = usePathname();
@@ -85,7 +87,10 @@ export function TranslateProvider({
     params?: Record<string, string | number>,
     options?: { noWrap?: boolean; orEmpty?: boolean },
   ) => {
-    const key = namespace ? `${namespace}.${id}` : id;
+    const isAbsolute = absolutePrefixes.some((prefix) =>
+      id.startsWith(`${prefix}.`),
+    );
+    const key = namespace && !isAbsolute ? `${namespace}.${id}` : id;
     const result = params
       ? t(key, params as never, options as never)
       : t(key, undefined, options as never);

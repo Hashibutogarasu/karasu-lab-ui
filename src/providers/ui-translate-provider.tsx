@@ -38,12 +38,16 @@ export function UiTranslateProvider({
     }
   }, [language]);
 
+  const absolutePrefixes = Object.keys(en);
+
   return (
     <TolgeeProvider
       tolgee={tolgeeUI.init()}
       fallback={null}
       options={{ useSuspense: false }}>
-      <TranslateProvider rootNamespace="components">
+      <TranslateProvider
+        rootNamespace="components"
+        absolutePrefixes={absolutePrefixes}>
         {children}
       </TranslateProvider>
     </TolgeeProvider>
