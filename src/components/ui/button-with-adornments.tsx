@@ -79,8 +79,7 @@ const ButtonWithAdornments = React.forwardRef<
     const classes = cn(buttonVariants({ variant, size }));
 
     const stepText = steps && steps.length > 0 ? steps[currentStep] : undefined;
-    const displayContent =
-      loading && stepText !== undefined ? stepText : children;
+    const displayContent = stepText !== undefined ? stepText : children;
     const useAnimation = loading || (steps && steps.length > 0);
     const showTrailing = !loading && trailing;
 
@@ -88,21 +87,27 @@ const ButtonWithAdornments = React.forwardRef<
       <Inner>
         {leading ? <AdornmentSlot>{leading}</AdornmentSlot> : null}
         <span style={{ flex: 1 }}>
-          {useAnimation ? (
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.span
-                key={
-                  loading && stepText !== undefined
-                    ? `step-${currentStep}`
-                    : 'default'
-                }
-                initial={{ y: 8, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -8, opacity: 0 }}
-                transition={{ duration: 0.15 }}>
-                {displayContent}
-              </motion.span>
-            </AnimatePresence>
+          {stepText !== undefined ? (
+            <span
+              style={{
+                overflow: 'hidden',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100%',
+              }}>
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.span
+                  key={loading ? `step-${currentStep}` : 'default'}
+                  initial={{ x: 20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: -20, opacity: 0 }}
+                  style={{ display: 'inline-block' }}
+                  transition={{ duration: 0.15 }}>
+                  {displayContent}
+                </motion.span>
+              </AnimatePresence>
+            </span>
           ) : (
             children
           )}
@@ -111,7 +116,7 @@ const ButtonWithAdornments = React.forwardRef<
       </Inner>
     );
 
-    if (useAnimation && !asChild) {
+    if (!asChild) {
       const {
         onDrag: _onDrag,
         onDragStart: _onDragStart,
@@ -131,7 +136,7 @@ const ButtonWithAdornments = React.forwardRef<
           className={cn(classes, className)}
           disabled={disabled || loading}
           animate={loading ? { opacity: 0.7 } : { opacity: 1 }}
-          transition={{ duration: 0.2 }}
+          transition={useAnimation ? { duration: 0.2 } : { duration: 0 }}
           {...motionSafeProps}>
           {innerContent}
         </motion.button>
@@ -139,7 +144,11 @@ const ButtonWithAdornments = React.forwardRef<
     }
 
     return (
-      <Comp ref={ref} className={cn(classes, className)} disabled={disabled || loading} {...props}>
+      <Comp
+        ref={ref}
+        className={cn(classes, className)}
+        disabled={disabled || loading}
+        {...props}>
         {innerContent}
       </Comp>
     );

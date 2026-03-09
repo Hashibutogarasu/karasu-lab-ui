@@ -108,58 +108,56 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     }
 
     const stepText = steps && steps.length > 0 ? steps[currentStep] : undefined;
-    const displayContent =
-      loading && stepText !== undefined ? stepText : children;
+    const displayContent = stepText !== undefined ? stepText : children;
     const useAnimation = loading || (steps && steps.length > 0);
 
-    if (useAnimation) {
-      const {
-        onDrag: _onDrag,
-        onDragStart: _onDragStart,
-        onDragEnd: _onDragEnd,
-        onDragOver: _onDragOver,
-        onDragEnter: _onDragEnter,
-        onDragLeave: _onDragLeave,
-        onDrop: _onDrop,
-        onAnimationStart: _onAnimationStart,
-        onAnimationEnd: _onAnimationEnd,
-        onAnimationIteration: _onAnimationIteration,
-        ...motionSafeProps
-      } = props;
-      return (
-        <motion.button
-          className={cn(buttonVariants({ variant, size, className }))}
-          ref={ref}
-          disabled={disabled || loading}
-          animate={loading ? { opacity: 0.7 } : { opacity: 1 }}
-          transition={{ duration: 0.2 }}
-          {...motionSafeProps}>
-          <AnimatePresence mode="wait" initial={false}>
-            <motion.span
-              key={
-                loading && stepText !== undefined
-                  ? `step-${currentStep}`
-                  : 'default'
-              }
-              initial={{ y: 8, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -8, opacity: 0 }}
-              transition={{ duration: 0.15 }}>
-              {displayContent}
-            </motion.span>
-          </AnimatePresence>
-        </motion.button>
-      );
-    }
+    const {
+      onDrag: _onDrag,
+      onDragStart: _onDragStart,
+      onDragEnd: _onDragEnd,
+      onDragOver: _onDragOver,
+      onDragEnter: _onDragEnter,
+      onDragLeave: _onDragLeave,
+      onDrop: _onDrop,
+      onAnimationStart: _onAnimationStart,
+      onAnimationEnd: _onAnimationEnd,
+      onAnimationIteration: _onAnimationIteration,
+      ...motionSafeProps
+    } = props;
 
     return (
-      <button
+      <motion.button
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         disabled={disabled || loading}
-        {...props}>
-        {children}
-      </button>
+        animate={loading ? { opacity: 0.7 } : { opacity: 1 }}
+        transition={useAnimation ? { duration: 0.2 } : { duration: 0 }}
+        {...motionSafeProps}>
+        {stepText !== undefined ? (
+          <span
+            style={{
+              overflow: 'hidden',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '100%',
+            }}>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.span
+                key={loading ? `step-${currentStep}` : 'default'}
+                initial={{ x: 20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -20, opacity: 0 }}
+                style={{ display: 'inline-block' }}
+                transition={{ duration: 0.15 }}>
+                {displayContent}
+              </motion.span>
+            </AnimatePresence>
+          </span>
+        ) : (
+          children
+        )}
+      </motion.button>
     );
   },
 );
