@@ -21,12 +21,12 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
+      "import": "./src/index.ts",
       "require": "./dist/index.js"
     },
     "./server": {
       "types": "./dist/server.d.ts",
-      "import": "./dist/server.mjs",
+      "import": "./src/server.ts",
       "require": "./dist/server.js"
     }
   },
