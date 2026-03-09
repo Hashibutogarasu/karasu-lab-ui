@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.3.2...karasu-lab-ui-v0.4.0) (2026-03-09)
+
+
+### Features
+
+* added button properties ([d7e55af](https://github.com/Hashibutogarasu/karasu-lab-ui/commit/d7e55afafdd3357792ac2c9e4c5bd0e2262f3633))
+
 ## [0.3.2](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.3.1...karasu-lab-ui-v0.3.2) (2026-03-03)
 
 
