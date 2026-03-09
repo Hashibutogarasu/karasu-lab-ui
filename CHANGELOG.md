@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.4.1...karasu-lab-ui-v0.5.0) (2026-03-09)
+
+
+### Features
+
+* added button component animations ([624235c](https://github.com/Hashibutogarasu/karasu-lab-ui/commit/624235cdc5eb99d5145fcb5464b66d3ead1a4ab8))
+
 ## [0.4.1](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.4.0...karasu-lab-ui-v0.4.1) (2026-03-09)
 
 
