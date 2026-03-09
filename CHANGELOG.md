@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.4.0...karasu-lab-ui-v0.4.1) (2026-03-09)
+
+
+### Bug Fixes
+
+* fixed ui package imports ([38cec40](https://github.com/Hashibutogarasu/karasu-lab-ui/commit/38cec40b0a7a0b94807fd4d15b083dd073400218))
+
 ## [0.4.0](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.3.2...karasu-lab-ui-v0.4.0) (2026-03-09)
 
 
