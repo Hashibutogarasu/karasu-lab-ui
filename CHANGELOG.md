@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.5.0...karasu-lab-ui-v0.5.1) (2026-03-09)
+
+
+### Bug Fixes
+
+* fixed build error ([b61f66f](https://github.com/Hashibutogarasu/karasu-lab-ui/commit/b61f66f5ec6ea6ee97671f24aa3e54c4c58cde85))
+
 ## [0.5.0](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.4.1...karasu-lab-ui-v0.5.0) (2026-03-09)
 
 
