@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.3](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.5.2...karasu-lab-ui-v0.5.3) (2026-03-10)
+
+
+### Bug Fixes
+
+* fixed step text is not translated ([a90be7a](https://github.com/Hashibutogarasu/karasu-lab-ui/commit/a90be7a30d59ad5e636f1c23f4b8cab3eaa3c5f4))
+
 ## [0.5.2](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.5.1...karasu-lab-ui-v0.5.2) (2026-03-10)
 
 
