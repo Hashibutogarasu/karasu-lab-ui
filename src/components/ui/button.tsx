@@ -144,7 +144,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             }}>
             <AnimatePresence mode="wait" initial={false}>
               <motion.span
-                key={loading ? `step-${currentStep}` : 'default'}
+                key={
+                  steps && steps.length > 0
+                    ? `step-${currentStep}`
+                    : loading
+                      ? 'loading'
+                      : 'default'
+                }
                 initial={{ x: 20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -20, opacity: 0 }}
