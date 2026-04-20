@@ -33,7 +33,7 @@ export function UiTranslateProvider({
   useEffect(() => {
     if (language) {
       const tolgee = tolgeeUI.init();
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      // oxlint-disable-next-line @typescript-eslint/no-explicit-any
       (tolgee as any).changeLanguage(language);
     }
   }, [language]);

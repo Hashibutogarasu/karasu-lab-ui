@@ -13,8 +13,10 @@ import { buttonVariants, type ButtonProps as BaseButtonProps } from './button';
  * Props interface for the ButtonWithAdornments component.
  * Extends ButtonProps with optional leading/trailing slot content and loading state.
  */
-export interface ButtonWithAdornmentsProps
-  extends Omit<BaseButtonProps, 'asChild' | 'className'> {
+export interface ButtonWithAdornmentsProps extends Omit<
+  BaseButtonProps,
+  'asChild' | 'className'
+> {
   /** Content to display before the button label */
   leading?: React.ReactNode;
   /** Content to display after the button label. Hidden when loading is true. */
