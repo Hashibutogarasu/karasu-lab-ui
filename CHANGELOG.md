@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.4](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.5.3...karasu-lab-ui-v0.5.4) (2026-05-02)
+
+
+### Bug Fixes
+
+* fixed cookie domain logics ([3eac958](https://github.com/Hashibutogarasu/karasu-lab-ui/commit/3eac95891b0597a8d2ed4e157bcaf51a9ada7977))
+
 ## [0.5.3](https://github.com/Hashibutogarasu/karasu-lab-ui/compare/karasu-lab-ui-v0.5.2...karasu-lab-ui-v0.5.3) (2026-03-10)
 
 ### Bug Fixes
