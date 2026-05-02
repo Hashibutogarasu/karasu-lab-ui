@@ -18,8 +18,7 @@ const defaultOptions: CookieOptions = {
   secure: process.env.NODE_ENV === 'production',
   httpOnly: true,
   sameSite: 'lax',
-  domain:
-    process.env.NODE_ENV === 'production' ? '.karasu256.com' : 'localhost',
+  domain: process.env.NEXT_PUBLIC_COOKIE_DOMAIN || undefined,
 };
 
 export async function setServerCookie<T extends Record<string, unknown>>(
